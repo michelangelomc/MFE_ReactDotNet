@@ -1,0 +1,44 @@
+.aluno-conteiner{
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__img{
+        width: 150px;
+    }
+
+    &__button{
+        height: 50px;
+        width: 200px;
+        border-radius: 5px;
+        border: 1px solid #DCDCE6;
+        background-color: #4CAF50;
+        margin-left: 16px;
+        transition: border-color 0.5s;
+    }
+
+    &__button:hover{
+        border-color: #510bac;
+        cursor: pointer;
+    }
+}
+
+.table, th, td{
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+        text-align: left;
+    }
