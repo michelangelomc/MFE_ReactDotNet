@@ -41,6 +41,7 @@ function App() {
       .then(response => {
         setData(data.concat(response.data));
         abrirFecharModalIncluir();
+        setUpdateData(true);
       }).catch(error => {
         console.log(error);
       })
@@ -73,6 +74,7 @@ function App() {
         })
         setData(dadosAuxiliar);
         abrirFecharModalEditar();
+        setUpdateData(true);
       }).catch(error => {
         console.log(error);
       })
@@ -95,7 +97,7 @@ function App() {
       .then(response => {
         setData(data.filter(aluno => aluno.id !== response.data));
         abrirFecharModalExcluir();
-        pedidoGet();
+        setUpdateData(true);
       }).catch(error => {
         console.log(error);
       })
@@ -107,6 +109,7 @@ function App() {
       setUpdateData(false);
     }  
   }, [updateData]);
+
   //**********FIM DAS REQUISIÇÕES***********/
 
   const selecionarAluno = (aluno, opcao) => {
